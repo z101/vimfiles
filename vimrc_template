@@ -1,0 +1,5 @@
+" specify new vimfiles path ('/' separator)
+let g:VimFilesDir=''
+let &runtimepath=printf('%s,%s,%s,%s', expand(g:VimFilesDir), expand(g:VimFilesDir.'/after'), $VIM, $VIMRUNTIME)
+
+exe 'source '.expand(g:VimFilesDir).'/vimconfig.vim'
