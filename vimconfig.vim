@@ -77,6 +77,8 @@ set noeb vb t_vb= " no bell, no visualbell
 set mousehide " hide the mouse pointer while typing
 set clipboard+=unnamed " Add the unnamed register to the clipboard
 
+noremap <F3> :set invnumber<CR>
+
 cnoreabbrev vc exe 'edit '.expand(g:VimFilesDir).'/vimconfig.vim'
 
 " XML folding
