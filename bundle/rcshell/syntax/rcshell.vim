@@ -22,18 +22,18 @@
 "
 " Disable loading this plugin.
 "
-if exists("g:loaded_rcshell")
-  finish
-endif
-let g:loaded_rcshell = 1
-"
-" For version 5.x: Clear all syntax items
-" For version 6.x: Quit when a syntax file was already loaded
-if version < 600
-  syntax clear
-elseif exists("b:current_syntax")
-  finish
-endif
+"if exists("g:loaded_rcshell")
+"  finish
+"endif
+"let g:loaded_rcshell = 1
+""
+"" For version 5.x: Clear all syntax items
+"" For version 6.x: Quit when a syntax file was already loaded
+"if version < 600
+"  syntax clear
+"elseif exists("b:current_syntax")
+"  finish
+"endif
 
 " I'm lazy, if someone knows how to do proper syncing, they can fix this
 " Rc script should be small anyway..
