@@ -29,6 +29,9 @@ elseif has("gui_gtk2")
 else
 endif
 
+syntax on " syntax highlighting
+
+set stl=%f\ %m\ %r\ %=[#%n]\ %5.5l,%-5.5c\ [%3.3p%%]\ [%3.3b][0x%2.2B] " set the status line the way i like it
 if has("gui_running")
 	"au GUIEnter * simalt ~x " full screen
 	
@@ -38,28 +41,23 @@ if has("gui_running")
 	set guioptions-=LlRrb "remove scroll bar 
 else
 	colorscheme dark " custom color scheme
+	hi User1 ctermbg=196 ctermfg=white guibg=red guifg=white
+	hi User2 ctermfg=12 ctermbg=232
+	set stl+=%2*\ %{hostname()}\%*
+	if $USER == 'root'
+		set stl+=\ %1*\ root\ 
+		set stl+=%*
+	endif
 	
 	set showtabline=0 " never show tab panel
 endif
 
-" Common
-
-syntax on " syntax highlighting
-
-hi User1 ctermbg=196 ctermfg=white guibg=red guifg=white
 
 let mapleader=',' " change default mapleader
 
 set t_Co=256 " 256 colors support
 set cursorline " highlight the cursor line
 "set virtualedit=all " ability to move cusor everywhere
-set stl=
-if $USER == 'root'
-	set stl=%1*\ root\ 
-	set stl+=%*
-	set stl+=\ 
-endif
-set stl+=%f\ %m\ %r\ %=[#%n]\ %5.5l,%-5.5c\ [%3.3p%%]\ [%3.3b][0x%2.2B] " set the status line the way i like it
 set laststatus=2 " tell VIM to always put a status line in, even if there is only one window
 set shortmess+=I " hide welcome text
 set showcmd " show entering command
