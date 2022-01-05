@@ -76,6 +76,8 @@ set mousehide " hide the mouse pointer while typing
 set clipboard+=unnamed " Add the unnamed register to the clipboard
 
 noremap <F3> :set invnumber<CR>
+noremap <F4> :silent make\|redraw!\|cw<CR>
+noremap <F5> :!make run<CR>
 
 cnoreabbrev vc exe 'edit '.expand(g:VimFilesDir).'/vimconfig.vim'
 
