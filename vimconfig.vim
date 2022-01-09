@@ -43,7 +43,7 @@ else
 	colorscheme dark " custom color scheme
 	hi User1 ctermbg=196 ctermfg=white guibg=red guifg=white
 	hi User2 ctermfg=12 ctermbg=232
-	set stl+=%2*\ %{hostname()}\%*
+	set stl+=%2*\%*
 	if $USER == 'root'
 		set stl+=\ %1*\ root\ 
 		set stl+=%*
