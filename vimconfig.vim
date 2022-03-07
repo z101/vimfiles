@@ -74,6 +74,7 @@ set cinoptions=(0 " indent params under function brace
 set noeb vb t_vb= " no bell, no visualbell
 set mousehide " hide the mouse pointer while typing
 set clipboard+=unnamed " Add the unnamed register to the clipboard
+set mouse=a " scrolling in xterm
 
 noremap <F3> :set invnumber<CR>
 noremap <F4> :silent make\|redraw!\|cw<CR>
