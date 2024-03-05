@@ -1,14 +1,22 @@
+let g:zfontsize = 12
+let g:netrw_browse_split = 3
+
+set encoding=utf-8
+
+" Switch off Swap / Backup / Undo
+set noswapfile
+set nobackup
+set noundofile
+
 " Pathogen
 
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+execute pathogen#infect()
 
 " Filetype stuff
 
+syntax on
 filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " GUI
 
@@ -16,11 +24,15 @@ if has("gui_win32")
 	colorscheme pyte " custom color scheme
 	language messages en " english language UI
 
-	set guifont=Terminus:h12:cDEFAULT " use cool terminus font
+	set guifont=Terminus:h12:cDEFAULT 
 	set showtabline=2 " always show tab panel
 
-	cnoreabbrev fx exe '% !'.expand(g:VimFilesDir).'/externaltools/xmllint-1.0.exe % --format'
+	let NERDTreeIgnore = ['\.DAT$[[file]]', '\.LOG1$[[file]]', '\.LOG2$[[file]]', '\c^ntuser\..*']
 
+	autocmd FileType python map <buffer> <F9> :w<CR>:exec '!C:\Users\Ilya_Gordeev\AppData\Local\Programs\Python\Python311\python.exe' shellescape(@%, 1)<CR>
+	autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!C:\Users\Ilya_Gordeev\AppData\Local\Programs\Python\Python311\python.exe' shellescape(@%, 1)<CR>
+
+	cnoreabbrev fx exe '% !"'.expand(g:VimFilesDir).'/externaltools/xmllint-1.0.exe" % --format'
 elseif has("gui_gtk2")
 	colorscheme dark
 
@@ -29,9 +41,6 @@ elseif has("gui_gtk2")
 else
 endif
 
-syntax on " syntax highlighting
-
-set stl=%f\ %m\ %r\ %=[#%n]\ %5.5l,%-5.5c\ [%3.3p%%]\ [%3.3b][0x%2.2B] " set the status line the way i like it
 if has("gui_running")
 	"au GUIEnter * simalt ~x " full screen
 	
@@ -41,23 +50,29 @@ if has("gui_running")
 	set guioptions-=LlRrb "remove scroll bar 
 else
 	colorscheme dark " custom color scheme
-	hi User1 ctermbg=196 ctermfg=white guibg=red guifg=white
-	hi User2 ctermfg=12 ctermbg=232
-	set stl+=%2*\%*
-	if $USER == 'root'
-		set stl+=\ %1*\ root\ 
-		set stl+=%*
-	endif
 	
 	set showtabline=0 " never show tab panel
 endif
 
+" Common
+
+syntax on " syntax highlighting
+
+hi User1 ctermbg=196 ctermfg=white guibg=red guifg=white
 
 let mapleader=',' " change default mapleader
+
 
 set t_Co=256 " 256 colors support
 set cursorline " highlight the cursor line
 "set virtualedit=all " ability to move cusor everywhere
+set stl=
+if $USER == 'root'
+	set stl=%1*\ root\ 
+	set stl+=%*
+	set stl+=\ 
+endif
+set stl+=%f\ %m\ %r\ %=[#%n]\ %5.5l,%-5.5c\ [%3.3p%%]\ [%3.3b][0x%2.2B] " set the status line the way i like it
 set laststatus=2 " tell VIM to always put a status line in, even if there is only one window
 set shortmess+=I " hide welcome text
 set showcmd " show entering command
@@ -74,17 +89,41 @@ set cinoptions=(0 " indent params under function brace
 set noeb vb t_vb= " no bell, no visualbell
 set mousehide " hide the mouse pointer while typing
 set clipboard+=unnamed " Add the unnamed register to the clipboard
-set mouse=a " scrolling in xterm
 
 noremap <F3> :set invnumber<CR>
-noremap <F4> :silent make\|redraw!\|cw<CR>
-noremap <F5> :!make run<CR>
+noremap <F8> :call ToggleFontSize()<CR>
+
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeMinimalMenu = 1
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 cnoreabbrev vc exe 'edit '.expand(g:VimFilesDir).'/vimconfig.vim'
 
 " XML folding
+
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
+
+function ToggleFontSize()
+	if ( g:zfontsize == 12 )
+		let g:zfontsize = 18
+	else
+		let g:zfontsize = 12
+	endif
+	execute "set guifont=Terminus:h".g:zfontsize.":cDEFAULT"
+endfunction
+
+" SnipMate
+
+let g:snipMate = { 'snippet_version' : 1 }
 
 " ARCHIVE
 "

@@ -21,7 +21,7 @@ hi Normal       ctermfg=252 guifg=#d0d0d0 ctermbg=none guibg=#202020 cterm=none
 hi Cursor                                 ctermbg=214 guibg=#ffaf00
 hi CursorColumn                           ctermbg=238 guibg=#444444
 hi CursorLine                             ctermbg=236 guibg=#303030 cterm=none 
-hi CursorLineNr ctermfg=248 guifg=#a8a8a8 ctermbg=236 guibg=#303030 cterm=none
+hi CursorLineNr ctermfg=248 guifg=#a8a8a8 ctermbg=236 guibg=#303030
 hi Error        ctermfg=15  guifg=#ffffff ctermbg=88  guibg=#870000
 hi ErrorMsg     ctermfg=15  guifg=#ffffff ctermbg=88  guibg=#870000
 hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
