@@ -94,7 +94,6 @@ noremap <F3> :set invnumber<CR>
 noremap <F8> :call ToggleFontSize()<CR>
 
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeMinimalMenu = 1
 
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
