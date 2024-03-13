@@ -1,9 +1,9 @@
 let g:zfontsize = 12
-let g:netrw_browse_split = 3
 
 set encoding=utf-8
 
 " Switch off Swap / Backup / Undo
+
 set noswapfile
 set nobackup
 set noundofile
@@ -28,9 +28,6 @@ if has("gui_win32")
 	set showtabline=2 " always show tab panel
 
 	let NERDTreeIgnore = ['\.DAT$[[file]]', '\.LOG1$[[file]]', '\.LOG2$[[file]]', '\c^ntuser\..*']
-
-	autocmd FileType python map <buffer> <F9> :w<CR>:exec '!C:\Users\Ilya_Gordeev\AppData\Local\Programs\Python\Python311\python.exe' shellescape(@%, 1)<CR>
-	autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!C:\Users\Ilya_Gordeev\AppData\Local\Programs\Python\Python311\python.exe' shellescape(@%, 1)<CR>
 
 	cnoreabbrev fx exe '% !"'.expand(g:VimFilesDir).'/externaltools/xmllint-1.0.exe" % --format'
 elseif has("gui_gtk2")
@@ -61,7 +58,6 @@ syntax on " syntax highlighting
 hi User1 ctermbg=196 ctermfg=white guibg=red guifg=white
 
 let mapleader=',' " change default mapleader
-
 
 set t_Co=256 " 256 colors support
 set cursorline " highlight the cursor line
@@ -123,27 +119,3 @@ endfunction
 " SnipMate
 
 let g:snipMate = { 'snippet_version' : 1 }
-
-" ARCHIVE
-"
-"autocmd BufEnter * silent! lcd %:p:h " default dir changed to current file parent
-"
-"" C IDE settings
-"
-""change default mapleader
-"let g:C_MapLeader = ','
-"
-"" SnipMate settings
-"
-"Function! ReloadSnippets( snippets_dir, ft )
-"	if strlen( a:ft ) == 0
-"		let filetype = "_"
-"	else
-"		let filetype = a:ft
-"	endif
-"
-"	call ResetSnippets()
-"	call GetSnippets( a:snippets_dir, filetype )
-"endfunction
-"
-"nmap ,rsn :call ReloadSnippets(snippets_dir, &filetype)<CR>
