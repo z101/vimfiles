@@ -17,37 +17,39 @@ let colors_name = "dark"
 "}}}
 " Colours {{{1
 "" General {{{2
-hi Normal       ctermfg=252 guifg=#d0d0d0 ctermbg=none guibg=#202020 cterm=none 
-hi Cursor                                 ctermbg=214 guibg=#ffaf00
-hi CursorColumn                           ctermbg=238 guibg=#444444
-hi CursorLine                             ctermbg=236 guibg=#303030 cterm=none 
-hi CursorLineNr ctermfg=248 guifg=#a8a8a8 ctermbg=236 guibg=#303030
-hi Error        ctermfg=15  guifg=#ffffff ctermbg=88  guibg=#870000
-hi ErrorMsg     ctermfg=15  guifg=#ffffff ctermbg=88  guibg=#870000
-hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
-hi Folded       ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
-hi IncSearch    ctermfg=0   guifg=#000000 ctermbg=223 guibg=#ffdfaf cterm=none 
-hi LineNr       ctermfg=240 guifg=#585858 ctermbg=234 guibg=#1c1c1c
-hi MatchParen   ctermfg=188 guifg=#d7d7d7 ctermbg=68  guibg=#5f87d7 cterm=bold gui=bold
+hi Normal       	ctermfg=252	guifg=#d0d0d0	ctermbg=none	guibg=#202020	cterm=none 
+hi Cursor										ctermbg=214		guibg=#ffaf00
+hi CursorColumn									ctermbg=238		guibg=#444444
+hi CursorLine									ctermbg=236		guibg=#303030	cterm=none	
+hi CursorLineNr		ctermfg=248	guifg=#a8a8a8	ctermbg=236		guibg=#303030
+hi Error			ctermfg=15	guifg=#ffffff	ctermbg=88		guibg=#870000
+hi ErrorMsg			ctermfg=15	guifg=#ffffff	ctermbg=88		guibg=#870000
+hi FoldColumn		ctermfg=247	guifg=#9e9e9e	ctermbg=233		guibg=#121212
+hi Folded			ctermfg=255	guifg=#eeeeee	ctermbg=60		guibg=#5f5f87
+hi IncSearch		ctermfg=0	guifg=#000000	ctermbg=223		guibg=#ffdfaf	cterm=none	
+hi LineNr			ctermfg=240	guifg=#585858	ctermbg=234		guibg=#1c1c1c
+hi MatchParen		ctermfg=188	guifg=#d7d7d7	ctermbg=68		guibg=#5f87d7	cterm=bold		gui=bold
 " TODO
-hi MoreMsg      ctermfg=77  guifg=#5fd75f
-hi Question     ctermfg=77  guifg=#5fd75f
-hi NonText      ctermfg=247 guifg=#9e9e9e ctermbg=none guibg=#202020 cterm=bold gui=bold
-hi Pmenu        ctermfg=0   guifg=#000000 ctermbg=250 guibg=#bcbcbc
-hi PmenuSel     ctermfg=255 guifg=#eeeeee ctermbg=243 guibg=#767676
-hi PmenuSbar                              ctermbg=252 guibg=#d0d0d0
-hi PmenuThumb   ctermfg=243 guifg=#767676
-hi Search       ctermfg=236 guifg=#303030 ctermbg=246 guibg=#949494
-hi SignColumn   ctermfg=248 guifg=#a8a8a8
-hi SpecialKey   ctermfg=77  guifg=#5fd75f
-hi SpellBad     ctermfg=160 guifg=#d70000 ctermbg=none                cterm=underline               guisp=#df0000
-hi SpellCap     ctermfg=189 guifg=#dfdfff ctermbg=none  guibg=#303030      cterm=underline gui=underline
-hi SpellRare    ctermfg=168 guifg=#df5f87 ctermbg=none  guibg=#303030 cterm=underline gui=underline
-hi SpellLocal   ctermfg=98  guifg=#875fdf ctermbg=none  guibg=#303030      cterm=underline gui=underline
-hi StatusLine   ctermfg=232 guifg=#303030 ctermbg=246 guibg=#949494 gui=reverse cterm=reverse
-hi StatusLineNC ctermfg=236 guifg=#303030 ctermbg=240 guibg=#585858
-hi TabLine      ctermfg=fg  guifg=fg      ctermbg=242 guibg=#666666
-hi TabLineFill  ctermfg=fg  guifg=fg      ctermbg=237 guibg=#3a3a3a
+hi MoreMsg			ctermfg=77	guifg=#5fd75f
+hi Question			ctermfg=77	guifg=#5fd75f
+hi NonText			ctermfg=247	guifg=#9e9e9e	ctermbg=none	guibg=#202020	cterm=bold		gui=bold
+hi Pmenu			ctermfg=0	guifg=#000000	ctermbg=250		guibg=#bcbcbc
+hi PmenuSel			ctermfg=255	guifg=#eeeeee	ctermbg=243		guibg=#767676
+hi PmenuSbar									ctermbg=252		guibg=#d0d0d0
+hi PmenuThumb		ctermfg=243	guifg=#767676
+hi Search			ctermfg=236	guifg=#303030	ctermbg=246		guibg=#949494
+hi SignColumn		ctermfg=248	guifg=#a8a8a8
+hi SpecialKey		ctermfg=77	guifg=#5fd75f
+hi SpellBad			ctermfg=160	guifg=#d70000	ctermbg=none					cterm=underline					guisp=#df0000
+hi SpellCap			ctermfg=189	guifg=#dfdfff	ctermbg=none	guibg=#303030	cterm=underline	gui=underline
+hi SpellRare		ctermfg=168	guifg=#df5f87	ctermbg=none	guibg=#303030	cterm=underline	gui=underline
+hi SpellLocal		ctermfg=98	guifg=#875fdf	ctermbg=none	guibg=#303030	cterm=underline	gui=underline
+hi StatusLine		ctermfg=232	guifg=#303030	ctermbg=246		guibg=#949494	cterm=reverse	gui=reverse
+hi StatusLineNC		ctermfg=236	guifg=#303030	ctermbg=240		guibg=#585858
+hi StatusLineTerm	ctermfg=250					ctermbg=22		
+hi StatusLineTermNC	ctermfg=236					ctermbg=240
+hi TabLine			ctermfg=fg	guifg=fg		ctermbg=242		guibg=#666666
+hi TabLineFill		ctermfg=fg	guifg=fg		ctermbg=237		guibg=#3a3a3a
 " FIXME
 hi Title        ctermfg=225 guifg=#ffdfff
 hi Todo         ctermfg=0   guifg=#000000 ctermbg=184 guibg=#dfdf00
