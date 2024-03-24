@@ -8,11 +8,10 @@ au FileType xml setlocal foldmethod=syntax
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif " exit Vim if NERDTree is the only window remaining in the only tab
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif " close the tab if NERDTree is the only window remaining in it
 cnoreabbrev vc exe 'edit '.expand(g:VimFilesDir).'/vimconfig.vim'
-colorscheme dark " custom color scheme
 filetype on
 filetype plugin indent on
 hi User1 ctermbg=196 ctermfg=white guibg=red guifg=white " term window highlighting
-language messages en " english language UI
+language messages en_US.UTF-8 " english language UI
 syntax on " syntax highlighting
 
 " Set options
@@ -43,8 +42,7 @@ set shiftwidth=4 " set tab = 4 spaces
 set shortmess+=I " hide welcome text
 set showcmd " show entering command
 set showtabline=0 " never show tab panel
-set stl=%f\ %m\ %r\ %=[#%n]\ %5.5l,%-5.5c\ [%3.3p%%]\ [%3.3b][0x%2.2B] " set the status line the way i like it
-set t_Co=256 " 256 colors support
+set stl=%f\ %m\ %r\ %=[#%n]\ %5.5l,%-5.5c\ [%3.3p%%]\ [%3.3b][0x%2.2B] " set the status line format
 set tabstop=4 " set tab = 4 spaces
 
 " Set global variables
@@ -61,6 +59,11 @@ if has("gui_win32")
 
 	set guifont=Terminus:h12:cDEFAULT 
 	set showtabline=2 " always show tab panel
+endif
+
+if $TERM == 'xterm-256color'
+	set t_Co=256 " 256 colors support
+	colorscheme dark " custom color scheme
 endif
 
 if $USER == 'root'
