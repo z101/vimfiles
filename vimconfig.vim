@@ -27,8 +27,6 @@ set guioptions+=LlRrb "remove scroll bar
 set guioptions-=LlRrb "remove scroll bar 
 set guioptions-=T "remove toolbar 
 set guioptions-=m "remove menu bar 
-set iminsert=0 " not breakable russian layout
-set imsearch=0 " not breakable russian layout
 set incsearch " enable increment search
 set keymap=russian-jcukenwin " not breakable russian layout
 set laststatus=2 " tell VIM to always put a status line in, even if there is only one window
@@ -44,6 +42,11 @@ set showcmd " show entering command
 set showtabline=0 " never show tab panel
 set stl=%f\ %m\ %r\ %=[#%n]\ %5.5l,%-5.5c\ [%3.3p%%]\ [%3.3b][0x%2.2B] " set the status line format
 set tabstop=4 " set tab = 4 spaces
+
+" Set default en layout
+
+set iminsert=0
+set imsearch=0
 
 " Set global variables
 
