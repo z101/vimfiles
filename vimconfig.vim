@@ -51,6 +51,8 @@ set imsearch=0
 
 " Set global variables
 
+let mapleader = ","
+let g:netrw_altv = 1
 let g:netrw_banner = 0
 let g:snipMate = { 'snippet_version' : 1 } " snipmate
 let g:xml_syntax_folding=1
@@ -74,6 +76,10 @@ endif
 if $USER == 'root'
 	set stl=%1*\ root %*\%f\ %m\ %r\ %=[#%n]\ %5.5l,%-5.5c\ [%3.3p%%]\ [%3.3b][0x%2.2B] " set root status line format
 endif
+
+" Set custom commands
+
+map <Leader>f :let @/=expand("%:t") <Bar> execute 'Vexplore' expand("%:h") <Bar> normal n<CR>
 
 " KB
 ":set invnumber<CR> - toggle row numbers
