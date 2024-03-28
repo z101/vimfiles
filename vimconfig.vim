@@ -27,7 +27,7 @@ set guioptions+=LlRrb "remove scroll bar
 set guioptions-=LlRrb "remove scroll bar 
 set guioptions-=T "remove toolbar 
 set guioptions-=m "remove menu bar 
-set hlsearch " highlight search
+set hlsearch " search highlight
 set incsearch " enable increment search
 set keymap=russian-jcukenwin " not breakable russian layout
 set laststatus=2 " tell VIM to always put a status line in, even if there is only one window
@@ -35,7 +35,6 @@ set mousehide " hide the mouse pointer while typing
 set nobackup " stop making a backup before overwriting a file
 set nocp
 set noeb vb t_vb= " no bell, no visualbell
-set nohlsearch " highlight found matches
 set noswapfile
 set noundofile
 set shiftwidth=4 " set tab = 4 spaces
