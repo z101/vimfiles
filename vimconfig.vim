@@ -27,6 +27,7 @@ set guioptions+=LlRrb "remove scroll bar
 set guioptions-=LlRrb "remove scroll bar 
 set guioptions-=T "remove toolbar 
 set guioptions-=m "remove menu bar 
+set hlsearch " highlight search
 set incsearch " enable increment search
 set keymap=russian-jcukenwin " not breakable russian layout
 set laststatus=2 " tell VIM to always put a status line in, even if there is only one window
