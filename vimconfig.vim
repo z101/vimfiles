@@ -22,6 +22,8 @@ set clipboard+=unnamed " Add the unnamed register to the clipboard
 set confirm " enable confirmation when switch between buffers
 set cursorline " highlight the cursor line
 set encoding=utf-8
+set foldenable
+set foldmethod=indent
 set guifont=Terminus\ 9 " use cool terminus font
 set guioptions+=LlRrb "remove scroll bar 
 set guioptions-=LlRrb "remove scroll bar 
