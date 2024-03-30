@@ -53,12 +53,13 @@ set imsearch=0
 
 " Set global variables
 
-let mapleader = ","
+let g:markdown_folding=1
 let g:netrw_altv = 1
 let g:netrw_banner = 0
 let g:snipMate = { 'snippet_version' : 1 } " snipmate
 let g:xml_syntax_folding=1
 let g:zfontsize = 12
+let mapleader = ","
 
 " Set custom conditions
 
