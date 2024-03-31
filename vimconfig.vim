@@ -9,6 +9,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif " close the tab if NERDTree is the only window remaining in it
 cnoreabbrev vc exe 'edit '.expand(g:VimFilesDir).'/vimconfig.vim'
 filetype on
+filetype indent on
 filetype plugin indent on
 hi User1 ctermbg=196 ctermfg=white guibg=red guifg=white " term window highlighting
 language messages en_US.UTF-8 " english language UI
@@ -43,6 +44,7 @@ set shiftwidth=4 " set tab = 4 spaces
 set shortmess+=I " hide welcome text
 set showcmd " show entering command
 set showtabline=0 " never show tab panel
+set smartindent
 set stl=%f\ %m\ %r\ %=[#%n]\ %5.5l,%-5.5c\ [%3.3p%%]\ [%3.3b][0x%2.2B] " set the status line format
 set tabstop=4 " set tab = 4 spaces
 
