@@ -84,5 +84,14 @@ endif
 
 map <Leader>f :let @/=expand("%:t") <Bar> execute 'Vexplore' expand("%:h") <Bar> normal n<CR>
 
+nnoremap <S-A-down> :m .+1<CR>==
+nnoremap <S-A-up> :m .-2<CR>==
+
+inoremap <S-A-down> <Esc>:m .+1<CR>==gi
+inoremap <S-A-up> <Esc>:m .-2<CR>==gi
+
+vnoremap <S-A-down> :m '>+1<CR>gv=gv
+vnoremap <S-A-up> :m '<-2<CR>gv=gv
+
 " KB
 ":set invnumber<CR> - toggle row numbers
