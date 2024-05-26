@@ -62,9 +62,6 @@ let mapleader = ","
 " Set custom conditions
 
 if has("gui_win32")
-	cnoreabbrev fx exe '% !"'.expand(g:VimFilesDir).'/externaltools/xmllint-1.0.exe" % --format'
-	colorscheme pyte " custom color scheme
-
 	set guifont=Terminus:h12:cDEFAULT 
 	set showtabline=2 " always show tab panel
 
