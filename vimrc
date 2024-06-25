@@ -54,6 +54,7 @@ set imsearch=0
 let g:markdown_folding=1
 let g:netrw_altv = 1
 let g:netrw_banner = 0
+let g:netrw_special_syntax = 1
 let g:snipMate = { 'snippet_version' : 1 } " snipmate
 let g:xml_syntax_folding=1
 let g:zfontsize = 12
@@ -131,6 +132,7 @@ if $TERM == 'xterm-256color'
 	hi CursorColumn ctermbg=238 guibg=#444444
 	hi CursorLine ctermbg=236 guibg=#303030 cterm=none 
 	hi CursorLineNr ctermfg=248 guifg=#a8a8a8 ctermbg=236 guibg=#303030
+	hi Directory ctermfg=110 guifg=#87afdf cterm=none
 	hi Error ctermfg=15 guifg=#ffffff ctermbg=88 guibg=#870000
 	hi ErrorMsg ctermfg=15 guifg=#ffffff ctermbg=88 guibg=#870000
 	hi FoldColumn ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
