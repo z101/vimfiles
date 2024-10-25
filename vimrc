@@ -6,6 +6,7 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 cnoreabbrev vc exe 'edit '$MYVIMRC
 filetype on
 filetype indent on
+filetype plugin on
 filetype plugin indent on
 hi User1 ctermbg=196 ctermfg=white guibg=red guifg=white " term window highlighting
 language messages en_US.UTF-8 " english language UI
@@ -36,6 +37,7 @@ set nocp
 set noeb vb t_vb= " no bell, no visualbell
 set noswapfile
 set noundofile
+set omnifunc=syntaxcomplete#Complete
 set shiftwidth=4 " set tab = 4 spaces
 set shortmess+=I " hide welcome text
 set showcmd " show entering command
