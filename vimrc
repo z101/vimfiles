@@ -37,6 +37,7 @@ set nocp
 set noeb vb t_vb= " no bell, no visualbell
 set noswapfile
 set noundofile
+set number
 set omnifunc=syntaxcomplete#Complete
 set shiftwidth=4 " set tab = 4 spaces
 set shortmess+=I " hide welcome text
@@ -133,7 +134,7 @@ if $TERM == 'xterm-256color'
 	hi Cursor ctermbg=214 guibg=#ffaf00
 	hi CursorColumn ctermbg=238 guibg=#444444
 	hi CursorLine ctermbg=236 guibg=#303030 cterm=none 
-	hi CursorLineNr ctermfg=248 guifg=#a8a8a8 ctermbg=236 guibg=#303030
+	hi CursorLineNr cterm=bold ctermfg=250 ctermbg=236
 	hi Directory ctermfg=110 guifg=#87afdf cterm=none
 	hi Error ctermfg=15 guifg=#ffffff ctermbg=88 guibg=#870000
 	hi ErrorMsg ctermfg=15 guifg=#ffffff ctermbg=88 guibg=#870000
